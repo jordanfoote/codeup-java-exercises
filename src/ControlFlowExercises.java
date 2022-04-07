@@ -12,14 +12,15 @@ public class ControlFlowExercises {
         //      i++;
         // }
 
-        // double x = 2;
+        // int x = 2;
         // do {
         //     System.out.println(x);
-        //     x *= x;
+        //     x = (int) Math.pow(x, 2);
         // } while (x <= 1000000);
 
-        // for (double y = 2; y <= 1000000; y *=y ) {
+        // for (int y = 2; y <= 1000000;) {
         //     System.out.println(y);
+        //     y = (int) Math.pow(y, 2);
         // }
 
         // for (int q = 1; q <= 100; q++) {
