@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
@@ -16,15 +18,24 @@ public class MethodsExercises {
         // System.out.println("Please enter a number between 1 and 10: ");
         // getInteger(1, 10);
 
-        System.out.println("Please enter a number between 1 and 10: ");
-        int inputNumber = scanner.nextInt();
-        System.out.println("Do you wish to continue? [y/n]");
-        String answer = scanner.next();
+        // System.out.println("Please enter a number between 1 and 10: ");
+        // int inputNumber = scanner.nextInt();
+        // System.out.println("Do you wish to continue? [y/n]");
+        // String answer = scanner.next();
+        // if (answer.equals("y")) {
+        //     getFactorial(inputNumber);
+        // } else {
+        //     System.out.println("Okay. Your loss!");
+        // }
 
+        System.out.println("How many sides does the dice have?");
+        int sides = scanner.nextInt();
+        System.out.println("Would you like to roll the dice? [y/n]");
+        String answer = scanner.next();
         if (answer.equals("y")) {
-            getFactorial(inputNumber);
+            rollDice(sides);
         } else {
-            System.out.println("Okay. Your loss!");
+            System.out.println("Alright. Be that way!");
         }
 
     }
@@ -69,28 +80,34 @@ public class MethodsExercises {
     //     return result;
     // }
 
-    public static long getFactorial(int num) {
-        long fact = 1;
+    // public static long getFactorial(int num) {
+    //     long fact = 1;
+//
+    //     if (num <= 10 && num >= 1) {
+    //         for (int i = 1; i <= num; i++) {
+    //             fact = fact * i;
+    //         }
+    //         System.out.println(fact);
+    //     } else {
+    //         System.out.println("ERROR. Enter a number between 1 and 10.");
+    //         Scanner sc = new Scanner(System.in);
+    //         int newInputNumber = sc.nextInt();
+    //         System.out.println("Do you wish to continue? [y/n]");
+    //         String answer = sc.next();
+//
+    //         if (answer.equals("y")) {
+    //             getFactorial(num);
+    //         } else {
+    //             System.out.println("Okay. Your loss!");
+    //         }
+    //     }
+    //     return fact;
+    // }
 
-        if (num <= 10 && num >= 1) {
-            for (int i = 1; i <= num; i++) {
-                fact = fact * i;
-            }
-            System.out.println(fact);
-        } else {
-            System.out.println("ERROR. Enter a number between 1 and 10.");
-            Scanner sc = new Scanner(System.in);
-            int newInputNumber = sc.nextInt();
-            System.out.println("Do you wish to continue? [y/n]");
-            String answer = sc.next();
-
-            if (answer.equals("y")) {
-                getFactorial(num);
-            } else {
-                System.out.println("Okay. Your loss!");
-            }
-        }
-        return fact;
+    public static int rollDice(int num) {
+        int first = Math.floor(Math.random() * num);
+        
+    }
     }
 }
 
