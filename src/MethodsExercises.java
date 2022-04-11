@@ -28,15 +28,15 @@ public class MethodsExercises {
         //     System.out.println("Okay. Your loss!");
         // }
 
-        System.out.println("How many sides does the dice have?");
-        int sides = scanner.nextInt();
-        System.out.println("Would you like to roll the dice? [y/n]");
-        String answer = scanner.next();
-        if (answer.equals("y")) {
-            rollDice(sides);
-        } else {
-            System.out.println("Alright. Be that way!");
-        }
+        // System.out.println("How many sides does the dice have?");
+        // int sides = scanner.nextInt();
+        // System.out.println("Would you like to roll the dice? [y/n]");
+        // String answer = scanner.next();
+        // if (answer.equals("y")) {
+        //     rollDice(sides);
+        // } else {
+        //     System.out.println("Alright. Be that way!");
+        // }
 
     }
 
@@ -104,10 +104,20 @@ public class MethodsExercises {
     //     return fact;
     // }
 
-    public static int rollDice(int num) {
-        int first = Math.floor(Math.random() * num);
-        
-    }
-    }
+    // public static int rollDice(int num) {
+    //     Scanner sc = new Scanner(System.in);
+    //     int roll1 = (int) (Math.random() * num);
+    //     int roll2 = (int) (Math.random() * num);
+    //     System.out.println(roll1);
+    //     System.out.println(roll2);
+    //     System.out.println("Would you like to roll again? [y/n]");
+    //     String answer = sc.next();
+    //     if (answer.equals("y")) {
+    //         rollDice(num);
+    //     } else {
+    //         System.out.println("Alright. Be that way!");
+    //     }
+    //     return roll1 + roll2;
+    // }
 }
 
