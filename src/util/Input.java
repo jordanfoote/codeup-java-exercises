@@ -60,4 +60,10 @@ public class Input {
         System.out.println(num);
         return num;
     }
+
+    public double getRadius() {
+        System.out.println("Please Enter the radius: ");
+        double radius = this.scanner.nextDouble();
+        return radius;
+    }
 }
