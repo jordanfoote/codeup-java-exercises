@@ -6,8 +6,7 @@ public class InputTest {
 
         Input input = new Input();
 
-        System.out.println("Please enter a string: ");
-        input.getString();
+        input.getString("Please enter a String: ");
 
         System.out.println("Do you want to continue? [Yes(y)/No(n)]");
         input.yesNo();
@@ -22,7 +21,7 @@ public class InputTest {
         input.getDouble(0.001, 0.999);
 
         System.out.println("Please enter any decimal number: ");
-        input.getDouble();
+        input.getDouble("");
 
 
     }

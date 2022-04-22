@@ -10,7 +10,7 @@ public class Input {
         this.scanner = new Scanner(System.in);
     }
 
-    String getString() {
+    String getString(String prompt) {
         String input = this.scanner.nextLine();
         System.out.println(input);
         return input;
@@ -38,11 +38,14 @@ public class Input {
         return num;
     }
 
-    int getInt() {
-        int num = this.scanner.nextInt();
-        System.out.println(num);
-        return num;
-    }
+    // int getInt() {
+    //     try {
+    //         return Integer.valueOf(getString("Please enter an integer: "));
+    //     } catch (NumberFormatException) {
+    //
+    //     }
+//
+    // }
 
     double getDouble(double min, double max) {
         double num = this.scanner.nextDouble();
@@ -55,10 +58,15 @@ public class Input {
         return num;
     }
 
-    double getDouble() {
-        double num = this.scanner.nextDouble();
-        System.out.println(num);
-        return num;
+    public double getDouble(String prompt) {
+        System.out.print(prompt);
+        String entry = scanner.next();
+        try {
+            return Double.valueOf(entry);
+        } catch(NumberFormatException e) {
+            System.out.println("Bro, do you know how to read.");
+            return getDouble(prompt);
+        }
     }
 
     public double getRadius() {
