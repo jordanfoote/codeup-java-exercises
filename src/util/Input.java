@@ -42,9 +42,7 @@ public class Input {
     //     try {
     //         return Integer.valueOf(getString("Please enter an integer: "));
     //     } catch (NumberFormatException) {
-    //
     //     }
-//
     // }
 
     double getDouble(double min, double max) {

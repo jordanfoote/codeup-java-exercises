@@ -15,7 +15,7 @@ public class InputTest {
         input.getInt(1, 20);
 
         System.out.println("Please enter a number: ");
-        input.getInt();
+        // input.getInt();
 
         System.out.println("Please enter a number between 0.001 and 0.999: ");
         input.getDouble(0.001, 0.999);

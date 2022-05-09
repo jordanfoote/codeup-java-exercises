@@ -5,25 +5,39 @@ import java.util.ArrayList;
 public class Student {
 
     private String name;
-    private ArrayList<Integer> grades = new ArrayList<>();
+    private ArrayList<Double> grades = new ArrayList<>();
 
-    public Student(String name, ArrayList<Integer> grades) {
+    public Student(String name) {
         this.name = name;
-        this.grades = grades;
+        this.grades = new ArrayList<>();
     }
 
     // returns the student's name
     public String getName() {
         return name;
     }
+
     // adds the given grade to the grades property
-    public void addGrade(int grade) {
+    public void addGrade(double grade) {
         grades.add(grade);
     }
+
     // returns the average of the students grades
     public double getGradeAverage() {
-        return grades.stream().reduce(0, (sum, currentGrade) -> {
-            return sum + currentGrade;
-        }) / grades.size();
+        double sum = 0;
+        for (Double grade : this.grades) {
+            sum += grade;
+        }
+        return (sum / this.grades.size());
+    }
+
+    public static void main(String[] args) {
+
+        Student student = new Student("Fred");
+        student.addGrade(100);
+        student.addGrade(75);
+        student.addGrade(90);
+
+        System.out.println(student.getGradeAverage());
     }
 }
